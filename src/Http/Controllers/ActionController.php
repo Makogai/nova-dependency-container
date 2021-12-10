@@ -1,8 +1,8 @@
 <?php
 
-namespace Epartment\NovaDependencyContainer\Http\Controllers;
+namespace Makogai\NovaDependencyContainer\Http\Controllers;
 
-use Epartment\NovaDependencyContainer\Http\Requests\ActionRequest;
+use Makogai\NovaDependencyContainer\Http\Requests\ActionRequest;
 use Laravel\Nova\Http\Requests\ActionRequest as NovaActionRequest;
 use Laravel\Nova\Http\Controllers\ActionController as NovaActionController;
 

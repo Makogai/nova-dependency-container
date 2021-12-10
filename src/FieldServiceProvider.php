@@ -21,7 +21,7 @@ class FieldServiceProvider extends ServiceProvider
         Event::listen(NovaServiceProviderRegistered::class, function () {
             app()->bind(
                 \Laravel\Nova\Http\Controllers\ActionController::class,
-                \Epartment\NovaDependencyContainer\Http\Controllers\ActionController::class
+                \Makogai\NovaDependencyContainer\Http\Controllers\ActionController::class
             );
         });
 
