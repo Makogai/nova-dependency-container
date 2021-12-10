@@ -23,7 +23,6 @@
 		props: ['resourceName', 'resourceId', 'field'],
 
 		mounted() {
-			console.log('MARKONI');
 			this.registerDependencyWatchers(this.$root, function() {
 				this.updateDependencyStatus();
 			});
@@ -113,8 +112,7 @@
 				for (let dependency of this.field.dependencies) {
 					// #93 compatability with flexible-content, which adds a generated attribute for each field
 					let dependencyValue = this.dependencyValues[(this.field.attribute + dependency.field)];
-						console.log(dependencyValue);
-					if (dependency.hasOwnProperty('existsIn') && dependencyValue.includes(dependency.existsIn)) {
+					if (dependency.hasOwnProperty('existsIn') && !dependencyValue && dependency.existsIn.includes(dependencyValue)) {
 					    this.dependenciesSatisfied = true;
 					    return;
 					}
