@@ -1,6 +1,6 @@
 <?php
 
-namespace Epartment\NovaDependencyContainer;
+namespace Makogai\NovaDependencyContainer;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\NovaServiceProviderRegistered;
