@@ -113,7 +113,8 @@
 
 					// #93 compatability with flexible-content, which adds a generated attribute for each field
 					let dependencyValue = this.dependencyValues[(this.field.attribute + dependency.field)];
-					if (dependency.hasOwnProperty('existsIn') && dependencyValue.existsIn.includes(dependency)) {
+					if (dependency.hasOwnProperty('existsIn')) {
+                        console.log(dependencyValue);
 					    this.dependenciesSatisfied = true;
 					    return;
 					}
