@@ -113,6 +113,22 @@ class NovaDependencyContainer extends Field
         ]);
     }
 
+        /**
+     * Adds a dependency on an array value
+     *
+     * @param $field
+     * @param $value
+     * @return $this
+     */
+    public function dependsOnExistsInArray($field, $value)
+    {
+        return $this->withMeta([
+            'dependencies' => array_merge($this->meta['dependencies'], [
+                array_merge($this->getFieldLayout($field), ['existsIn' => $value])
+            ])
+        ]);
+    }
+
     /**
      * Get layout for a specified field. Dot notation will result in {field}.{property}. If no dot was found it will
      * result in {field}.{field}, as it was in previous versions by default.
